@@ -34,8 +34,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProjectDummyProvider,
-    GoogleMaps
+    ProjectDummyProvider
   ]
 })
 export class AppModule {}

@@ -2,6 +2,13 @@
   <ion-navbar>
     <ion-title>
       {{project.getTitle()}}
+      <span class="location">
+        {{project.getAddr_city()}}, {{project.getAddr_start()}} - {{project.getAddr_end()}}
+      </span>
+
+      <!-- <ion-avatar>
+        <img [src]=""></img>
+      </ion-avatar> -->
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,13 +16,13 @@
 <ion-content padding>
   <ion-grid>
       <ion-row>
-        <ion-col col-7>
+        <ion-col col-8>
           <p>{{project.getDate_start() | date}}</p>
           <p>{{project.getDate_end() | date}}</p>
           <p>{{project.getAddr_start()}}</p>
           <p>{{project.getAddr_end()}}</p>
         </ion-col>
-        <ion-col col-5>
+        <ion-col col-4>
           <active-process></active-process>
         </ion-col>
       </ion-row>

@@ -5,12 +5,15 @@ export class Person {
     private firm: string;
     private job: string;
 
-    constructor(name: string, tel: string, mail: string, firm: string, job: string) {
+    private img: string;
+
+    constructor(name: string, tel: string, mail: string, firm: string, job: string, img: string) {
         this.name = name;
         this.tel = tel;
         this.mail = mail;
         this.firm = firm;
         this.job = job;
+        this.img = img;
     }
 
     getName(): string {

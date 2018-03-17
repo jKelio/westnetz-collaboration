@@ -3,6 +3,7 @@ import { Process } from './Process';
 export class Project {
     private title: string;
 
+    private addr_city: string;
     private addr_start: string;
     private addr_end: string;
 
@@ -13,8 +14,9 @@ export class Project {
 
     //private users: Array<User>;
 
-    constructor(title: string, addr_start: string, addr_end: string, date_start: Date, date_end: Date){
+    constructor(title: string, addr_city: string, addr_start: string, addr_end: string, date_start: Date, date_end: Date){
         this.title = title;
+        this.addr_city = addr_city;
         this.addr_start = addr_start;
         this.addr_end = addr_end;
         this.date_start = date_start;
@@ -34,6 +36,10 @@ export class Project {
     getDate_end() :Date {
         return this.date_end;
     }
+
+    getAddr_city(): string {
+        return this.addr_city;
+    };
 
     getAddr_start() :string {
         return this.addr_start;

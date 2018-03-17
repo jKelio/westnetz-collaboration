@@ -3,13 +3,14 @@ import { Person } from './Person';
 export class Process {
     private title: string;
     private description: string;
-    private state: string;
+    private status: string;
 
     private start: Date;
     private end: Date;
 
     private children: Array<Process>;
     private persons: Array<Person>;
+    private files: Array<{path:string , name: string}>;
 
     constructor(title: string, description: string, start: Date, end: Date) {
         this.title = title;
@@ -20,6 +21,7 @@ export class Process {
 
         this.children = [];
         this.persons = [];
+        this.files = [];
     }
 
     getTitle(): string {
@@ -46,8 +48,8 @@ export class Process {
         return this.persons;
     }
 
-    setState(state: string): void {
-        this.state = state;
+    setStatus(status: string): void {
+        this.status = status;
     }
 
     addChild(child: Process): void {
@@ -57,4 +59,8 @@ export class Process {
     addPerson(person: Person): void {
         this.persons.push(person);
     }
+
+    addFile(file: {path: string, name: string}): void {
+        this.files.push(file);
+    };
 }

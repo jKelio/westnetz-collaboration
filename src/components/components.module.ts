@@ -3,15 +3,18 @@ import { ActiveProcessComponent } from './active-process/active-process';
 import { ScheduleComponent } from './schedule/schedule';
 import { AllProcessesComponent } from './all-processes/all-processes';
 import { MapComponent } from './map/map';
+import { DocHistoryComponent } from './doc-history/doc-history';
 @NgModule({
 	declarations: [ActiveProcessComponent,
     ScheduleComponent,
     AllProcessesComponent,
-    MapComponent],
+    MapComponent,
+    DocHistoryComponent],
 	imports: [],
 	exports: [ActiveProcessComponent,
     ScheduleComponent,
     AllProcessesComponent,
-    MapComponent],
+    MapComponent,
+    DocHistoryComponent],
 })
 export class ComponentsModule {}

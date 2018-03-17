@@ -3,16 +3,26 @@
       Prozesse
     </ion-card-header>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-4 id="list-col">
         <ion-list>
-          <div io-item *ngFor="let process of processes">
+          <button ion-item *ngFor="let process of processes" (click)="click(process)">
             <h3>{{process.getTitle()}}</h3>
-            <span>{{process.getStart() | date}} - {{process.getEnd() | date}}</span>
-          </div>
+            <small>{{process.getStart() | date}} - {{process.getEnd() | date}}</small>
+          </button>
         </ion-list>
       </ion-col>
-      <ion-col col-8>
+      <ion-col col-8 id="info-col">
+        <div *ngIf="selected">
+          <h2>{{selected.title}}</h2>
 
+          <h4>Status</h4>
+          <p>{{selected.status}}</p>
+
+          <h4>Beschreibung</h4>
+          <p>{{selected.description}}</p>
+          
+          <h4>Anhang</h4>
+        </div>
       </ion-col>
     </ion-row>
 </ion-card>
