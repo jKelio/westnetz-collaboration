@@ -12,9 +12,10 @@ export class Process {
     private persons: Array<Person>;
     private files: Array<{path:string , name: string}>;
 
-    constructor(title: string, description: string, start: Date, end: Date) {
+    constructor(title: string, description: string, start: Date, end: Date, status: string) {
         this.title = title;
         this.description = description;
+        this.status = status;
 
         this.start = start;
         this.end = end;
@@ -46,6 +47,10 @@ export class Process {
 
     getPersons(): Array<Person> {
         return this.persons;
+    }
+
+    getFiles(): Array<{path: string, name: string}> {
+        return this.files;
     }
 
     setStatus(status: string): void {

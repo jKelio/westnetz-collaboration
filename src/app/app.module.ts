@@ -12,6 +12,7 @@ import { ActiveProcessComponent } from '../components/active-process/active-proc
 import { AllProcessesComponent } from '../components/all-processes/all-processes';
 import { MapComponent } from '../components/map/map';
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { DocHistoryComponent } from '../components/doc-history/doc-history';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     HomePage,
     ActiveProcessComponent,
     AllProcessesComponent,
-    MapComponent
+    MapComponent,
+    DocHistoryComponent
   ],
   imports: [
     BrowserModule,

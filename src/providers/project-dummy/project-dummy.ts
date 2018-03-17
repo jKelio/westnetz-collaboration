@@ -14,17 +14,20 @@ export class ProjectDummyProvider {
         var process1 = new Process('Prozess #1',
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 2, 16),
-            new Date(2018, 2, 27));
+            new Date(2018, 2, 27),
+            'Offen');
 
         var process2 = new Process('Prozess #2',
             'Prozessbeschreibung für Prozess Nummer 2.',
             new Date(2018, 2, 20),
-            new Date(2018, 3, 3));
+            new Date(2018, 3, 3),
+            'Offen');
 
         var process3 = new Process('Prozess #3',
             'Prozessbeschreibung für Prozess Nummer 3.',
             new Date(2018, 3, 3),
-            new Date(2018, 4, 18));
+            new Date(2018, 4, 18),
+            'Offen');
 
         
         
@@ -78,6 +81,12 @@ export class ProjectDummyProvider {
             path: './assets/docs/Verlegung 2.jpg',
             name: 'Verlegung 2.jpg'
         };
+
+        process1.addFile(file1);
+        process1.addFile(file2);
+        process1.addFile(file3);
+        process1.addFile(file4);
+        process1.addFile(file5);
 
         process1.addPerson(person1);
         process1.addPerson(person2);
