@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SchedulerComponent } from '../components/scheduler/scheduler';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SchedulerComponent
   ],
   imports: [
     BrowserModule,
