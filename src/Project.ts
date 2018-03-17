@@ -64,4 +64,16 @@ export class Project {
     addProcess(process: Process): void {
         this.processes.push(process);
     }
+
+    getCalendarEvents() {
+        return this.processes.map(function (curr: Process) {
+            return {
+                id: curr.getTitle(),
+                resourceId: curr.getRole(),
+                title: curr.getTitle(),
+                start: curr.getStart().toISOString(),
+                end: curr.getEnd().toISOString()
+            };
+        });
+    }
 }

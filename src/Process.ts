@@ -5,6 +5,8 @@ export class Process {
     private description: string;
     private status: string;
 
+    private role: string;
+
     private start: Date;
     private end: Date;
 
@@ -12,13 +14,15 @@ export class Process {
     private persons: Array<Person>;
     private files: Array<{path:string , name: string}>;
 
-    constructor(title: string, description: string, start: Date, end: Date, status: string) {
+    constructor(title: string, description: string, start: Date, end: Date, status: string, role: string) {
         this.title = title;
         this.description = description;
         this.status = status;
 
         this.start = start;
         this.end = end;
+
+        this.role = role;
 
         this.children = [];
         this.persons = [];
@@ -51,6 +55,10 @@ export class Process {
 
     getFiles(): Array<{path: string, name: string}> {
         return this.files;
+    }
+
+    getRole(): string {
+        return this.role;
     }
 
     setStatus(status: string): void {

@@ -15,19 +15,22 @@ export class ProjectDummyProvider {
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 2, 16),
             new Date(2018, 2, 27),
-            'Offen');
+            'Offen',
+            'tiefbauer');
 
         var process2 = new Process('Prozess #2',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 2, 20),
             new Date(2018, 3, 3),
-            'Offen');
+            'Offen',
+            'techniker');
 
         var process3 = new Process('Prozess #3',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 3, 3),
             new Date(2018, 4, 18),
-            'Offen');
+            'Offen',
+            'vermesser');
 
         
         

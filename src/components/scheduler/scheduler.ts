@@ -26,7 +26,6 @@ export class SchedulerComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit(): void {
-    debugger;
     const element: JQuery = $(this.elementRef.nativeElement);
     element.fullCalendar({
       schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
@@ -46,8 +45,23 @@ export class SchedulerComponent implements AfterViewInit {
           duration: { days: 3 }
         }
       },
-      resourceLabelText: "Beteiligte",
-      resources: this.resources,
+      resourceLabelText: "Akteure",
+      resources: [{
+        id: "kommune",
+        title: "Kommune"
+      },{
+        id: "tiefbauer",
+        title: "Tiefbauer"
+      }, {
+        id: "vermesser",
+        title: "Vermesser"
+      }, {
+        id: "techniker",
+        title: "Systemdienstleiter"
+      }, {
+        id: "aufmaß",
+        title: "Aufmaß"
+      }],
       events: this.events
     });
   }

@@ -5,10 +5,6 @@
       <span class="location">
         {{project.getAddr_city()}}, {{project.getAddr_start()}} - {{project.getAddr_end()}}
       </span>
-
-      <!-- <ion-avatar>
-        <img [src]=""></img>
-      </ion-avatar> -->
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -17,10 +13,12 @@
   <ion-grid>
       <ion-row>
         <ion-col col-8>
-          <p>{{project.getDate_start() | date}}</p>
+          <!-- <p>{{project.getDate_start() | date}}</p>
           <p>{{project.getDate_end() | date}}</p>
           <p>{{project.getAddr_start()}}</p>
-          <p>{{project.getAddr_end()}}</p>
+          <p>{{project.getAddr_end()}}</p> -->
+
+          <scheduler [events]="project.getCalendarEvents()"></scheduler>
         </ion-col>
         <ion-col col-4>
           <active-process></active-process>
