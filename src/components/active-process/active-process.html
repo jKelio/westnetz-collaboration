@@ -1,0 +1,13 @@
+<ion-card>
+  <ion-card-header>
+    {{process.getTitle()}}
+  </ion-card-header>
+  <ion-card-content>
+    {{process.getDescription()}}
+    <ion-list ng-repeat="child in process.getChildren()">
+        <ion-item>
+            {{child.getTitle()}}
+        </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
