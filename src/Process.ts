@@ -1,5 +1,7 @@
+import { Person } from './Person';
+
 export class Process {
-    private name: string;
+    private title: string;
     private description: string;
     private state: string;
 
@@ -7,16 +9,21 @@ export class Process {
     private end: Date;
 
     private children: Array<Process>;
+    private persons: Array<Person>;
 
-    constructor(name: string, description: string, start: Date, end: Date) {
-        this.name = name;
+    constructor(title: string, description: string, start: Date, end: Date) {
+        this.title = title;
+        this.description = description;
 
         this.start = start;
         this.end = end;
+
+        this.children = [];
+        this.persons = [];
     }
 
-    getName(): string {
-        return this.name;
+    getTitle(): string {
+        return this.title;
     }
 
     getStart(): Date {
@@ -27,9 +34,17 @@ export class Process {
         return this.end;
     }
 
+    getDescription(): string {
+        return this.description;
+    }
+
     getChildren(): Array<Process> {
         return this.children;
     } 
+
+    getPersons(): Array<Person> {
+        return this.persons;
+    }
 
     setState(state: string): void {
         this.state = state;
@@ -37,5 +52,9 @@ export class Process {
 
     addChild(child: Process): void {
         this.children.push(child);
+    }
+
+    addPerson(person: Person): void {
+        this.persons.push(person);
     }
 }

@@ -1,0 +1,18 @@
+<ion-card>
+    <ion-card-header>
+      Prozesse
+    </ion-card-header>
+    <ion-row>
+      <ion-col col-4>
+        <ion-list ng-repeat="process in processes">
+          <div io-item>
+            <h3>{{process.getTitle()}}</h3>
+            <span>{{process.getStart()}} - {{process.getEnd()}}</span>
+          </div>
+        </ion-list>
+      </ion-col>
+      <ion-col col-8>
+        
+      </ion-col>
+    </ion-row>
+</ion-card>

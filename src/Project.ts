@@ -19,6 +19,8 @@ export class Project {
         this.addr_end = addr_end;
         this.date_start = date_start;
         this.date_end = date_end;
+
+        this.processes = [];
     }
 
     getTitle () :string {
@@ -46,8 +48,9 @@ export class Project {
     }
 
     getProcess(date: Date): Process {
-        return this.processes.find((value: Process) => {
-            if(value.getStart() < date && date <= value.getEnd())
+        return this.processes.find((curr: Process) => {
+
+            if(curr.getStart() < date && date <= curr.getEnd())
                 return true;
         });
     }

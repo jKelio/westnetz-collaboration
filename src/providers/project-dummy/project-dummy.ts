@@ -3,38 +3,65 @@ import { Injectable } from '@angular/core';
 
 import { Process } from '../../Process';
 import { Project } from '../../Project';
+import { Person } from '../../Person';
 
 @Injectable()
 export class ProjectDummyProvider {
 
   constructor () {}
 
-    getDummyProject() : Project {
-        var dummy: Project;
+    getDummy() : Project {
+        var process1 = new Process('Prozess #1',
+            'Prozessbeschreibung für Prozess Nummer 1.',
+            new Date(2018, 2, 16),
+            new Date(2018, 2, 27));
 
-        dummy = new Project('Test Projekt', 
+        var process2 = new Process('Prozess #2',
+            'Prozessbeschreibung für Prozess Nummer 2.',
+            new Date(2018, 2, 20),
+            new Date(2018, 3, 3));
+
+        var process3 = new Process('Prozess #3',
+            'Prozessbeschreibung für Prozess Nummer 3.',
+            new Date(2018, 3, 3),
+            new Date(2018, 4, 18));
+
+        
+        
+        var dummy = new Project('Test Projekt', 
             'Startstr. 123', 
             'Endstr. 456', 
-            new Date(2018, 17, 3), 
-            new Date(2018, 17, 8));
+            new Date(2018, 2, 15), 
+            new Date(2018, 7, 15));
         
-        dummy.addProcess(new Process('Prozess #1',
-            'Prozessbeschreibung für Prozess Nummer 1.',
-            new Date(2018, 18, 3),
-            new Date(2018, 27, 3)
-        ));
+        var person1 = new Person('Person 1', 
+            '+49 123 456 789', 
+            'example.mail@domain.com',
+            'Beispielfirma',
+            'Beispieljob');
+        var person2 = new Person('Person 2', 
+        '+49 123 456 789', 
+        'example.mail@domain.com',
+        'Beispielfirma',
+        'Beispieljob');
+        var person3 = new Person('Person 3', 
+        '+49 123 456 789', 
+        'example.mail@domain.com',
+        'Beispielfirma',
+        'Beispieljob');
 
-        dummy.addProcess(new Process('Prozess #2',
-            'Prozessbeschreibung für Prozess Nummer 2.',
-            new Date(2018, 20, 3),
-            new Date(2018, 3, 4)
-        ));
+        process1.addPerson(person1);
+        process2.addPerson(person1);
+        process2.addPerson(person2);
+        process3.addPerson(person1);
+        process3.addPerson(person2);
+        process3.addPerson(person3);
+        
+        dummy.addProcess(process1);
+        dummy.addProcess(process2);
+        dummy.addProcess(process3);
 
-        dummy.addProcess(new Process('Prozess #3',
-            'Prozessbeschreibung für Prozess Nummer 3.',
-            new Date(2018, 3, 4),
-            new Date(2018, 18, 5)
-        ));
+
 
         return dummy;
     }

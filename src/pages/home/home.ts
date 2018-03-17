@@ -13,7 +13,7 @@ export class HomePage {
   private project: Project;
 
   constructor(public navCtrl: NavController, private ps: ProjectDummyProvider) {
-      this.project = ps.getDummyProject();
+      this.project = ps.getDummy();
   }
 
 }
