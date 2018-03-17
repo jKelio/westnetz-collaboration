@@ -13,6 +13,8 @@ export class AllProcessesComponent {
   public selected: Process;
   public processes: Array<Process> = [];
 
+  public openModal = new EventEmitter<any>();
+
   constructor(ps: ProjectDummyProvider) {
     console.log(ps.getDummy().getProcesses());
     this.processes = ps.getDummy().getProcesses();
@@ -21,6 +23,10 @@ export class AllProcessesComponent {
 
   public click(process: Process): void {
     this.selected = process;
+  }
+
+  fileModal(page): void {
+    this.openModal.emit(page);
   }
 
 }

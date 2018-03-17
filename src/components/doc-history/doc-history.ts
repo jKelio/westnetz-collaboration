@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ProjectDummyProvider } from '../../providers/project-dummy/project-dummy';
 
 import { Process } from '../../Process';
@@ -9,9 +9,14 @@ import { Process } from '../../Process';
 })
 export class DocHistoryComponent {
   @Input() process: Process;
+  @Output() openModal = new EventEmitter<any>();
 
   constructor() {
     
+  }
+
+  fileModal(page): void {
+    this.openModal.emit(page);
   }
 
 }

@@ -1,15 +1,13 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Platform } from 'ionic-angular';
 
-debugger;
-
 declare var google: any;
 
 @Component({
   selector: 'map',
   templateUrl: 'map.html'
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent {
 
   @ViewChild('mapCanvas') mapElement: ElementRef;
   mapData: any = [{
@@ -22,14 +20,21 @@ export class MapComponent implements AfterViewInit {
     lng: 50.0
   }];
 
-  constructor() {}
+  constructor(public platform: Platform) {
+    platform.ready().then(() => {
+      this.loadMap();
+    });
+  }
 
-  ngAfterViewInit(): void {
+    // ngAfterViewInit(): void {
+    //   this.loadMap();
+    // }
 
+  private loadMap(): void {
     let mapEle = this.mapElement.nativeElement;
 
     let map = new google.maps.Map(mapEle, {
-      center: this.mapData.find((d: any) => d.center),
+      center: new google.maps.LatLng(43.071584, -89.380120),
       zoom: 16
     });
 
@@ -39,7 +44,7 @@ export class MapComponent implements AfterViewInit {
       });
 
       let marker = new google.maps.Marker({
-        position: markerData,
+        position: new google.maps.LatLng(43.071584, -89.380120),
         map: map,
         title: markerData.name
       });
@@ -51,6 +56,6 @@ export class MapComponent implements AfterViewInit {
 
     google.maps.event.addListenerOnce(map, 'idle', () => {
       mapEle.classList.add('show-map');
-    }); 
+    });
   }
 }

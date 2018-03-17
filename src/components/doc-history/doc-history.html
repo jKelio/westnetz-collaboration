@@ -2,7 +2,7 @@
   <ion-row id="doc-row">
     <span class="file" *ngFor="let doc of process.getFiles()">
       <div><ion-icon name="ios-document-outline"></ion-icon></div>
-      <a [href]="doc.path"><small>{{doc.name}}</small></a>
+      <a (click)="fileModal(doc)"><small>{{doc.name}}</small></a>
     </span>
   </ion-row>
 </div>
