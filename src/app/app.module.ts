@@ -6,12 +6,23 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ProjectDummyProvider } from '../providers/project-dummy/project-dummy';
+
+import { ActiveProcessComponent } from '../components/active-process/active-process';
+import { AllProcessesComponent } from '../components/all-processes/all-processes';
+import { MapComponent } from '../components/map/map';
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { DocHistoryComponent } from '../components/doc-history/doc-history';
 import { SchedulerComponent } from '../components/scheduler/scheduler';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    ActiveProcessComponent,
+    AllProcessesComponent,
+    MapComponent,
+    DocHistoryComponent,
     SchedulerComponent
   ],
   imports: [
@@ -26,7 +37,8 @@ import { SchedulerComponent } from '../components/scheduler/scheduler';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProjectDummyProvider
   ]
 })
 export class AppModule {}

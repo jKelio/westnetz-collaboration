@@ -1,0 +1,49 @@
+active-process {
+    font-family: url('../../assets/innogyLight.woff2') !important;
+
+    h4 {
+        font-size: 15px !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+
+    p {
+        color: white !important;
+    }
+
+    ion-card {
+
+        .name {
+            font-weight: bold;
+        }
+
+        .job {
+            margin-left: 5px;
+            font-style: italic;
+        }
+
+        ion-card-content {
+            font-size: 16px !important;
+        }
+
+        ion-card-header {
+            color: white !important;
+            font-size: 30px !important;
+        }
+
+        border-radius: 0 !important;
+        box-shadow: 0 !important;
+        background-color: #f59b00 !important;
+        color: white !important;
+    }
+
+    ion-list {
+        color: white !important;
+        background-color: #f59b00 !important;
+    }
+
+    ion-item {
+        color: white !important;
+        background-color: #f59b00 !important;
+    }
+}

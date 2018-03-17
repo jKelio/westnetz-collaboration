@@ -1,11 +1,37 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      {{project.getTitle()}}
+      <span class="location">
+        {{project.getAddr_city()}}, {{project.getAddr_start()}} - {{project.getAddr_end()}}
+      </span>
+
+      <!-- <ion-avatar>
+        <img [src]=""></img>
+      </ion-avatar> -->
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <scheduler [events]="events" [resources]="resources"></scheduler>
+  <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <p>{{project.getDate_start() | date}}</p>
+          <p>{{project.getDate_end() | date}}</p>
+          <p>{{project.getAddr_start()}}</p>
+          <p>{{project.getAddr_end()}}</p>
+        </ion-col>
+        <ion-col col-4>
+          <active-process></active-process>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <all-processes></all-processes>
+        </ion-col>
+      </ion-row>
+      <map></map>
+  </ion-grid>
+
 </ion-content>
