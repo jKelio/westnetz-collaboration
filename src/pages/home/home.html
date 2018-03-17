@@ -10,8 +10,8 @@
   <ion-grid>
       <ion-row>
         <ion-col col-7>
-          <p>{{project.getDate_start()}}</p>
-          <p>{{project.getDate_end()}}</p>
+          <p>{{project.getDate_start() | date}}</p>
+          <p>{{project.getDate_end() | date}}</p>
           <p>{{project.getAddr_start()}}</p>
           <p>{{project.getAddr_end()}}</p>
         </ion-col>
@@ -21,7 +21,7 @@
       </ion-row>
       <ion-row>
         <ion-col col-12>
-            <!-- <all-processes></all-processes> -->
+          <all-processes></all-processes>
         </ion-col>
       </ion-row>
       <map></map>

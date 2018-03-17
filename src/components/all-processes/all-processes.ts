@@ -10,10 +10,11 @@ import { Process } from '../../Process';
 })
 export class AllProcessesComponent {
 
-  public processes: Array<Process>;
+  public processes: Array<Process> = [];
 
   constructor(ps: ProjectDummyProvider) {
     console.log(ps.getDummy().getProcesses());
+    debugger
     this.processes = ps.getDummy().getProcesses();
   }
 

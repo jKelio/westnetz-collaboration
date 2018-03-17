@@ -11,6 +11,7 @@ import { ProjectDummyProvider } from '../providers/project-dummy/project-dummy';
 import { ActiveProcessComponent } from '../components/active-process/active-process';
 import { AllProcessesComponent } from '../components/all-processes/all-processes';
 import { MapComponent } from '../components/map/map';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MapComponent } from '../components/map/map';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProjectDummyProvider
+    ProjectDummyProvider,
+    GoogleMaps
   ]
 })
 export class AppModule {}

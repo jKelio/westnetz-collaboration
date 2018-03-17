@@ -12,4 +12,24 @@ export class Person {
         this.firm = firm;
         this.job = job;
     }
+
+    getName(): string {
+        return this.name;
+    }
+
+    getTel(): string {
+        return this.name;
+    }
+
+    getMail(): string {
+        return this.mail;
+    }
+
+    getFirm(): string {
+        return this.firm;
+    }
+
+    getJob(): string {
+        return this.job;
+    }
 }
