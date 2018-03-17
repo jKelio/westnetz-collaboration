@@ -11,7 +11,7 @@ import { ProjectDummyProvider } from '../providers/project-dummy/project-dummy';
 import { ActiveProcessComponent } from '../components/active-process/active-process';
 import { AllProcessesComponent } from '../components/all-processes/all-processes';
 import { MapComponent } from '../components/map/map';
-import { GoogleMaps } from '@ionic-native/google-maps';
+//import { GoogleMaps } from '@ionic-native/google-maps';
 import { DocHistoryComponent } from '../components/doc-history/doc-history';
 import { SchedulerComponent } from '../components/scheduler/scheduler';
 
