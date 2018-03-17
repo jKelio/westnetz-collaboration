@@ -18,13 +18,13 @@ export class ProjectDummyProvider {
             'Offen');
 
         var process2 = new Process('Prozess #2',
-            'Prozessbeschreibung für Prozess Nummer 2.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 2, 20),
             new Date(2018, 3, 3),
             'Offen');
 
         var process3 = new Process('Prozess #3',
-            'Prozessbeschreibung für Prozess Nummer 3.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 3, 3),
             new Date(2018, 4, 18),
             'Offen');
@@ -87,6 +87,14 @@ export class ProjectDummyProvider {
         process1.addFile(file3);
         process1.addFile(file4);
         process1.addFile(file5);
+
+        process2.addFile(file5);
+        process2.addFile(file4);
+        process2.addFile(file3);
+
+        process3.addFile(file2);
+        process3.addFile(file3);
+        process3.addFile(file5);
 
         process1.addPerson(person1);
         process1.addPerson(person2);
