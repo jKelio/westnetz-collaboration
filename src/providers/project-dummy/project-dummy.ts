@@ -12,22 +12,22 @@ export class ProjectDummyProvider {
   constructor () {}
 
     getDummy() : Project {
-        var process1 = new Process('Prozess #1',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        var process1 = new Process('Erdarbeiten',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             new Date(2018, 2, 16),
             new Date(2018, 2, 27),
-            'Offen',
+            'In Bearbeitung',
             'tiefbauer');
 
-        var process2 = new Process('Prozess #2',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        var process2 = new Process('Vermessung',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 2, 20),
             new Date(2018, 3, 3),
-            'Offen',
+            'In',
             'techniker');
 
-        var process3 = new Process('Prozess #3',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        var process3 = new Process('Abnahme',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             new Date(2018, 3, 3),
             new Date(2018, 4, 18),
             'Offen',
@@ -46,19 +46,19 @@ export class ProjectDummyProvider {
             'example.mail@domain.com',
             'Beispielfirma',
             'Beispieljob',
-            './assets/imgs/workers.jpeg');
+            './assets/imgs/tiefbau.jpg');
         var person2 = new Person('Person 2', 
             '+49 123 456 789', 
             'example.mail@domain.com',
             'Beispielfirma',
             'Beispieljob',
-            './assets/imgs/workers.jpeg');
+            './assets/imgs/vermesser.jpg');
         var person3 = new Person('Person 3', 
             '+49 123 456 789', 
             'example.mail@domain.com',
             'Beispielfirma',
             'Beispieljob',
-            './assets/imgs/workers.jpeg');
+            './assets/imgs/aufmaß.jpg');
 
         var file1 = new AttachedFile(
             './assets/docs/Plan (Maßstab 500).pdf', {

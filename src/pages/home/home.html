@@ -7,6 +7,16 @@
         {{project.getAddr_city()}}, {{project.getAddr_start()}} - {{project.getAddr_end()}}
       </span>
     </ion-title>
+
+    <span id="searchbar">
+      <ion-searchbar
+        [(ngModel)]="myInput"
+        [showCancelButton]="shouldShowCancel"
+        (ionInput)="onInput($event)"
+        (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+    </span>
+
   </ion-navbar>
   
 </ion-header>
@@ -14,17 +24,12 @@
 <ion-content padding>
   <ion-grid>
       <ion-row id="overview">
-        <ion-col col-9>
-          <!-- <p>{{project.getDate_start() | date}}</p>
-          <p>{{project.getDate_end() | date}}</p>
-          <p>{{project.getAddr_start()}}</p>
-          <p>{{project.getAddr_end()}}</p> -->
-          
+        <ion-col col-8>
           <div id="scheduler-wrapper">
             <scheduler [events]="project.getCalendarEvents()"></scheduler>
           </div>
         </ion-col>
-        <ion-col col-3>
+        <ion-col col-4>
           <active-process></active-process>
         </ion-col>
       </ion-row>

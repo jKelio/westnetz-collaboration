@@ -11,11 +11,17 @@ page-home {
 
     #scheduler-wrapper {
         margin: 10px;
-        height: 550px;
+        height: 525px;
     }
 
     #overview {
         height: 550px;
-        margin-bottom: 32px;
+        margin-bottom: 4px;
+    }
+
+    #searchbar {
+        position: absolute;
+        right: 4px;
+        top: 3px;
     }
 }

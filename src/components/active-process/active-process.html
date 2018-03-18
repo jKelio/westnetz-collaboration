@@ -5,16 +5,17 @@
   <ion-card-content>
     <div class="info">
       <h4>Status</h4>
-      {{process.status}}
+      <span>Begonnen am:</span><span style="float: right;"> {{process.start | date}}</span><br>
+      <span>Geplant bis:</span><span style="float: right;">{{process.end | date}}</span>
       <hr>
       <h4>Beschreibung</h4>
       {{process.description}}
       <hr>
       <h4>Ansprechpartner</h4>
       <ion-list>
-          <ion-item *ngFor="let child of process.getChildren()">
-            {{child.title}}
-          </ion-item>
+        <ion-item *ngFor="let child of process.getChildren()">
+          {{child.title}}
+        </ion-item>
       </ion-list>
     </div>
     <ion-list id="persons">
@@ -26,7 +27,7 @@
         <span class="job">{{person.job}}</span>
         <p>{{person.firm}}</p>
         <p>Tel: {{person.tel}}</p>
-        <p>Mail: {{person.mail}}</p>
+        <p class="mail">Mail: {{person.mail}}</p>
       </ion-item>
     </ion-list>
   </ion-card-content>

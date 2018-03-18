@@ -30,6 +30,7 @@ export class SchedulerComponent implements AfterViewInit {
     element.fullCalendar({
       schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
       //resourceAreaWidth: 230,
+      locale: 'de',
       editable: true,
       height: "parent",
       scrollTime: "00:00",
@@ -53,6 +54,7 @@ export class SchedulerComponent implements AfterViewInit {
       defaultView: "timelineMonth",
       resourceLabelText: "Akteure",
       resourceAreaWidth: '10em',
+      displayEventTime: false,
       resources: [{
         id: "kommune",
         title: "Kommune",

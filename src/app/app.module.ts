@@ -17,7 +17,6 @@ import { FilePage } from '../pages/file/file';
 import { ContactHistoryComponent } from '../components/contact-history/contact-history';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ConstructionPage } from '../pages/construction/construction';
-import { DashboardPage } from '../pages/dashboard/dashboard';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
     FilePage,
     TabsPage,
     ConstructionPage,
-    DashboardPage,
     ActiveProcessComponent,
     AllProcessesComponent,
     MapComponent,
@@ -44,8 +42,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
     HomePage,
     FilePage,
     TabsPage,
-    ConstructionPage,
-    DashboardPage
+    ConstructionPage
   ],
   providers: [
     StatusBar,

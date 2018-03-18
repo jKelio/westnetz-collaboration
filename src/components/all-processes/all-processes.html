@@ -17,7 +17,8 @@
           <ion-row>
             <ion-col col-6>
               <h4>Status</h4>
-              <span>{{selected.status}}</span>
+              <span>Begonnen am:</span><span style="float: right;"> {{selected.start | date}}</span><br>
+              <span>Geplant bis:</span><span style="float: right;">{{selected.end | date}}</span>
 
               <br>
               <hr>
