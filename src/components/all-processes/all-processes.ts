@@ -1,7 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ProjectDummyProvider } from '../../providers/project-dummy/project-dummy';
 
 import { Process } from '../../Process';
+import { AttachedFile } from '../../AttachedFile';
 
 @Component({
   selector: 'all-processes',
@@ -25,8 +26,8 @@ export class AllProcessesComponent {
     this.selected = process;
   }
 
-  fileModal(page): void {
-    this.openModal.emit(page);
+  fileModal(file: AttachedFile): void {
+    this.openModal.emit(file);
   }
 
 }

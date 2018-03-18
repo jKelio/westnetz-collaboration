@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
+import { Person } from '../../Person';
+import { AttachedFile } from '../../AttachedFile';
 /**
  * Generated class for the FilePage page.
  *
@@ -15,8 +18,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FilePage {
 
+  file: AttachedFile;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.navParams);
+    this.file = navParams.data;
   }
 
   ionViewDidLoad() {

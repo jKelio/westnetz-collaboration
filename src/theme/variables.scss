@@ -86,3 +86,10 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+  font-family: "Innogy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Innogy"), local("Innogy"), url("#{$font-path}/innogyMedium.woff2") format("woff2");
+}

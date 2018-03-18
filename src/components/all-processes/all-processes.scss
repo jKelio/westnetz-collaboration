@@ -1,7 +1,13 @@
 all-processes {
+    font-family: 'Innogy';
+
+    button.triggered {
+        background-color: rgba(0, 0, 0, .125);
+    }
 
     ion-card-header {
         font-size: 30px !important;
+        margin: 15px 0 0 15px !important;
     }
 
     ion-card {
@@ -13,6 +19,10 @@ all-processes {
         ion-card-header {
             color: white !important;
         }
+    }
+
+    ion-row {
+        margin-bottom: 25px;
     }
 
     button {
@@ -36,7 +46,12 @@ all-processes {
     }
 
     #info-col {
-        padding: 16px !important;
+        padding: 15px !important;
+        padding-left: 40px !important;
+    }
+
+    #person-col {
+        padding-left: 40px !important;
     }
 
     h2 {
@@ -46,6 +61,7 @@ all-processes {
     }
 
     h4 {
+        margin: 10px 0 5px 0 !important;
         font-size: 15px !important;
         color: white !important;
         font-weight: bold !important;

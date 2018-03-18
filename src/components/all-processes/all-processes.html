@@ -1,6 +1,6 @@
 <ion-card>
     <ion-card-header>
-      Prozesse
+      Projektabschnitte
     </ion-card-header>
     <ion-row>
       <ion-col col-4 id="list-col">
@@ -14,15 +14,31 @@
       <ion-col col-8 id="info-col">
         <div *ngIf="selected">
           <h2>{{selected.title}}</h2>
+          <ion-row>
+            <ion-col col-6>
+              <h4>Status</h4>
+              <span>{{selected.status}}</span>
 
-          <h4>Status</h4>
-          <p>{{selected.status}}</p>
+              <br>
+              <hr>
+    
+              <h4>Beschreibung</h4>
+              <p>{{selected.description}}</p>
+    
+              <br>
+              <hr>
 
-          <h4>Beschreibung</h4>
-          <p>{{selected.description}}</p>
-          
-          <h4>Anhang</h4>
-          <doc-history [process]="selected"></doc-history>
+              <h4>Anhang</h4>
+              <doc-history [process]="selected" (openModal)="fileModal($event)"></doc-history>
+            </ion-col>
+            <ion-col col-6 id="person-col">
+              <div *ngIf="selected">  
+                <h2>&nbsp;</h2>
+                <h4>Ansprechpartner</h4>
+                <contact-history [process]="selected"></contact-history>
+              </div>
+            </ion-col>
+          </ion-row>
         </div>
       </ion-col>
     </ion-row>

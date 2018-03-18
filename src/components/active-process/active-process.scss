@@ -1,5 +1,5 @@
 active-process {
-    font-family: url('../../assets/innogyLight.woff2') !important;
+    font-family: 'Innogy';
 
     h4 {
         font-size: 15px !important;
@@ -11,26 +11,26 @@ active-process {
         color: white !important;
     }
 
+    hr {
+        margin-top: 10px !important;
+    }
+
     ion-card {
 
-        // ::-webkit-scrollbar {
-        //     background-color: transparent;
-        //     color: transparent;
-        // }
+        padding: 15px !important;
 
-        ::-webkit-scrollbar-track {
+        #persons::-webkit-scrollbar-track {
             display: none;
+            background-color: transparent !important;
+            color: transparent !important;
         }
 
-        ::-webkit-scrollbar * {
-            background:transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-            background:#999 !important;
+        #info {
+            height: 300px;
         }
 
         #persons {
-            height: 100px;
+            height: 200px;
             overflow-y: scroll;
         }
 

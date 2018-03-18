@@ -21,6 +21,9 @@ doc-history {
     a {
         text-decoration: none !important;
         color: white;
+    }
 
+    a:hover {
+        text-decoration: underline !important;
     }
 }

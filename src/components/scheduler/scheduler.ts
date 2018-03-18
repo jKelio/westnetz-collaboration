@@ -29,38 +29,50 @@ export class SchedulerComponent implements AfterViewInit {
     const element: JQuery = $(this.elementRef.nativeElement);
     element.fullCalendar({
       schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
-      resourceAreaWidth: 230,
+      //resourceAreaWidth: 230,
       editable: true,
       height: "parent",
       scrollTime: "00:00",
       header: {
         left: "promptResource today prev,next",
         center: "title",
-        right: "timelineDay,timelineThreeDays,agendaWeek,month"
+        right: "timelineMonth,month"
       },
-      defaultView: "timelineDay",
       views: {
-        timelineThreeDays: {
-          type: "timeline",
-          duration: { days: 3 }
+        timelineMonth: {
+          buttonText: 'Zeitleiste',
+          slotLabelFormat: [
+            '[KW] w',
+            'dd DD', 
+          ]
+        },
+        month: {
+          buttonText: 'Kalender'
         }
       },
+      defaultView: "timelineMonth",
       resourceLabelText: "Akteure",
+      resourceAreaWidth: '10em',
       resources: [{
         id: "kommune",
-        title: "Kommune"
+        title: "Kommune",
+        eventColor: "#00aae1"
       },{
         id: "tiefbauer",
-        title: "Tiefbauer"
+        title: "Tiefbauer",
+        eventColor: "#e60050"
       }, {
         id: "vermesser",
-        title: "Vermesser"
+        title: "Vermesser",
+        eventColor: " #f59b00"
       }, {
         id: "techniker",
-        title: "Systemdienstleiter"
+        title: "Systemdienstleiter",
+        eventColor: "#009ba5"
       }, {
         id: "aufmaß",
-        title: "Aufmaß"
+        title: "Aufmaß",
+        eventColor: "#e60050"
       }],
       events: this.events
     });

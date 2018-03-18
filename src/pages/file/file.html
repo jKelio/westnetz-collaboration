@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>file-page</ion-title>
+    <ion-title>Vorschau <span class="filename">{{file.name}}</span></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,17 +15,12 @@
 
 <ion-content [ngSwitch]="file.type" padding>
   <div *ngSwitchCase="'pdf'">
-    <object [data]="file.name" type="application/pdf" style="width: 100%; height: 100%">
-      alt : <a [href]="file.path">test.pdf</a>
-    </object>
+      <a [href]="file.path">{{file.name}}</a>
   </div>
   <div *ngSwitchCase="'image'">
-      <img [src]="file.img">
+      <img [src]="file.path">
   </div>
-  <div id="footer">
-    {{file.name}}
-    <div id="map-wrapper">
-      <map></map>
-    </div>
+  <div id="map-wrapper">
+    <map></map>
   </div>
 </ion-content>

@@ -85,7 +85,7 @@ export class ProjectDummyProvider {
         );
 
         var file4 = new AttachedFile(
-            './assets/docs/Verlegung 1.jpeg', {
+            './assets/docs/Verlegung 1.jpg', {
                 lat: 0.0,
                 lng: 0.0
             },
@@ -93,7 +93,7 @@ export class ProjectDummyProvider {
         );
 
         var file4 = new AttachedFile(
-            './assets/docs/Verlegung 2.jpeg', {
+            './assets/docs/Verlegung 2.jpg', {
                 lat: 0.0,
                 lng: 0.0
             },
@@ -101,7 +101,7 @@ export class ProjectDummyProvider {
         );
 
         var file5 = new AttachedFile(
-            './assets/docs/Verlegung 3.jpeg', {
+            './assets/docs/Verlegung 3.jpg', {
                 lat: 0.0,
                 lng: 0.0
             },
@@ -127,9 +127,7 @@ export class ProjectDummyProvider {
         process1.addPerson(person3);
         process2.addPerson(person1);
         process2.addPerson(person2);
-        process3.addPerson(person1);
         process3.addPerson(person2);
-        process3.addPerson(person3);
         
         dummy.addProcess(process1);
         dummy.addProcess(process2);

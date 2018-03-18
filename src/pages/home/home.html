@@ -14,21 +14,23 @@
 <ion-content padding>
   <ion-grid>
       <ion-row id="overview">
-        <ion-col col-8>
+        <ion-col col-9>
           <!-- <p>{{project.getDate_start() | date}}</p>
           <p>{{project.getDate_end() | date}}</p>
           <p>{{project.getAddr_start()}}</p>
           <p>{{project.getAddr_end()}}</p> -->
-
-          <scheduler [events]="project.getCalendarEvents()"></scheduler>
+          
+          <div id="scheduler-wrapper">
+            <scheduler [events]="project.getCalendarEvents()"></scheduler>
+          </div>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-3>
           <active-process></active-process>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col col-12>
-          <all-processes></all-processes>
+          <all-processes (openModal)="fileModal($event)"></all-processes>
         </ion-col>
       </ion-row>
       <map></map>

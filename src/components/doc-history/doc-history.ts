@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ProjectDummyProvider } from '../../providers/project-dummy/project-dummy';
 
 import { Process } from '../../Process';
+import { AttachedFile } from '../../AttachedFile';
 
 @Component({
   selector: 'doc-history',
@@ -15,8 +16,8 @@ export class DocHistoryComponent {
     
   }
 
-  fileModal(page): void {
-    this.openModal.emit(page);
+  fileModal(file: AttachedFile): void {
+    this.openModal.emit(file);
   }
 
 }

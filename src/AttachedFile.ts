@@ -12,6 +12,9 @@ export class AttachedFile {
         this.path = path;
         this.name = path.split('/')[path.split('/').length - 1];
         this.type = path.split('.')[path.split('.').length - 1];
+
+        this.geo = geo;
+        this.author = author;
         
         // map extensions
         switch(this.type) {
