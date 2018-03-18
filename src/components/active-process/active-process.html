@@ -15,7 +15,7 @@
           {{child.title}}
         </ion-item>
     </ion-list>
-    <ion-list>
+    <ion-list id="persons">
       <ion-item *ngFor="let person of process.getPersons()">
         <ion-avatar item-start>
           <img [src]="person.img">

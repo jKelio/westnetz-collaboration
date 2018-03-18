@@ -15,12 +15,12 @@
 
 <ion-content [ngSwitch]="file.type" padding>
   <div *ngSwitchCase="'pdf'">
-    <object data="test.pdf" type="application/pdf" width="300" height="200">
-      alt : <a href="./assets/docs/Plan (Maßstab 500).pdf">test.pdf</a>
+    <object [data]="file.name" type="application/pdf" style="width: 100%; height: 100%">
+      alt : <a [href]="file.path">test.pdf</a>
     </object>
   </div>
   <div *ngSwitchCase="'image'">
-      <img [src]="">
+      <img [src]="file.img">
   </div>
   <div id="footer">
     {{file.name}}

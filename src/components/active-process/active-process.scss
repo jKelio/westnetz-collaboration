@@ -13,6 +13,27 @@ active-process {
 
     ion-card {
 
+        // ::-webkit-scrollbar {
+        //     background-color: transparent;
+        //     color: transparent;
+        // }
+
+        ::-webkit-scrollbar-track {
+            display: none;
+        }
+
+        ::-webkit-scrollbar * {
+            background:transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background:#999 !important;
+        }
+
+        #persons {
+            height: 100px;
+            overflow-y: scroll;
+        }
+
         .name {
             font-weight: bold;
         }
