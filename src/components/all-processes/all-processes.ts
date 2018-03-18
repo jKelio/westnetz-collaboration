@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { ProjectDummyProvider } from '../../providers/project-dummy/project-dummy';
 
 import { Process } from '../../Process';
@@ -13,7 +13,7 @@ export class AllProcessesComponent {
   public selected: Process;
   public processes: Array<Process> = [];
 
-  public openModal = new EventEmitter<any>();
+  @Output() openModal = new EventEmitter<any>();
 
   constructor(ps: ProjectDummyProvider) {
     console.log(ps.getDummy().getProcesses());

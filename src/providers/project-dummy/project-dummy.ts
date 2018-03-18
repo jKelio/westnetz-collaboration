@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Process } from '../../Process';
 import { Project } from '../../Project';
 import { Person } from '../../Person';
+import { AttachedFile } from '../../AttachedFile';
 
 @Injectable()
 export class ProjectDummyProvider {
@@ -31,7 +32,6 @@ export class ProjectDummyProvider {
             new Date(2018, 4, 18),
             'Offen',
             'vermesser');
-
         
         
         var dummy = new Project('Test Projekt',
@@ -60,30 +60,53 @@ export class ProjectDummyProvider {
             'Beispieljob',
             './assets/imgs/workers.jpeg');
 
-        var file1 = {
-            path: './assets/docs/Plan (Maßstab 500).pdf',
-            name: 'Plan (Maßstab 500).pdf'
-        };
+        var file1 = new AttachedFile(
+            './assets/docs/Plan (Maßstab 500).pdf', {
+                lat: 0.0,
+                lng: 0.0
+            },
+            person1
+        );
 
-        var file2 = {
-            path: './assets/docs/Plan (Maßstab 1000).pdf',
-            name: 'Plan (Maßstab 1000).pdf'
-        };
+        var file2 = new AttachedFile(
+            './assets/docs/Plan (Maßstab 1000).pdf', {
+                lat: 0.0,
+                lng: 0.0
+            },
+            person1
+        );
 
-        var file3 = {
-            path: './assets/docs/Plan (Maßstab 5000).pdf',
-            name: 'Plan (Maßstab 5000).pdf'
-        };
+        var file3 = new AttachedFile(
+            './assets/docs/Plan (Maßstab 5000).pdf', {
+                lat: 0.0,
+                lng: 0.0
+            },
+            person1
+        );
 
-        var file4 = {
-            path: './assets/docs/Verlegung2.jpg',
-            name: 'Verlegung 1.jpg'
-        };
+        var file4 = new AttachedFile(
+            './assets/docs/Verlegung 1.jpeg', {
+                lat: 0.0,
+                lng: 0.0
+            },
+            person2
+        );
 
-        var file5 = {
-            path: './assets/docs/Verlegung 2.jpg',
-            name: 'Verlegung 2.jpg'
-        };
+        var file4 = new AttachedFile(
+            './assets/docs/Verlegung 2.jpeg', {
+                lat: 0.0,
+                lng: 0.0
+            },
+            person2
+        );
+
+        var file5 = new AttachedFile(
+            './assets/docs/Verlegung 3.jpeg', {
+                lat: 0.0,
+                lng: 0.0
+            },
+            person3
+        );
 
         process1.addFile(file1);
         process1.addFile(file2);

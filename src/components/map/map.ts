@@ -26,10 +26,6 @@ export class MapComponent {
     });
   }
 
-    // ngAfterViewInit(): void {
-    //   this.loadMap();
-    // }
-
   private loadMap(): void {
     let mapEle = this.mapElement.nativeElement;
 

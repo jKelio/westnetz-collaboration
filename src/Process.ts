@@ -1,4 +1,5 @@
 import { Person } from './Person';
+import { AttachedFile } from './AttachedFile';
 
 export class Process {
     private title: string;
@@ -12,7 +13,7 @@ export class Process {
 
     private children: Array<Process>;
     private persons: Array<Person>;
-    private files: Array<{path:string , name: string}>;
+    private files: Array<AttachedFile>;
 
     constructor(title: string, description: string, start: Date, end: Date, status: string, role: string) {
         this.title = title;
@@ -53,7 +54,7 @@ export class Process {
         return this.persons;
     }
 
-    getFiles(): Array<{path: string, name: string}> {
+    getFiles(): Array<AttachedFile> {
         return this.files;
     }
 
@@ -73,7 +74,7 @@ export class Process {
         this.persons.push(person);
     }
 
-    addFile(file: {path: string, name: string}): void {
+    addFile(file: AttachedFile): void {
         this.files.push(file);
     };
 }

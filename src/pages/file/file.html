@@ -13,6 +13,19 @@
 </ion-header>
 
 
-<ion-content padding>
-  Hello World!
+<ion-content [ngSwitch]="file.type" padding>
+  <div *ngSwitchCase="'pdf'">
+    <object data="test.pdf" type="application/pdf" width="300" height="200">
+      alt : <a href="./assets/docs/Plan (Maßstab 500).pdf">test.pdf</a>
+    </object>
+  </div>
+  <div *ngSwitchCase="'image'">
+      <img [src]="">
+  </div>
+  <div id="footer">
+    {{file.name}}
+    <div id="map-wrapper">
+      <map></map>
+    </div>
+  </div>
 </ion-content>
