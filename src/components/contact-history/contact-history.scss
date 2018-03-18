@@ -1,0 +1,32 @@
+contact-history {
+
+    ion-list, ion-item {
+        background-color: transparent !important;
+    }
+
+    #person {
+        text-align: center;
+
+        .wrapper {
+            display: inline-block;
+            width: 80px !important;
+            padding: 0 5px;
+        }
+    }
+
+    .name {
+        color: white;
+        font-weight: bold;
+    }
+
+    .job {
+        color: white;
+        font-style: italic;
+    }
+
+    .mail {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+}

@@ -1,0 +1,12 @@
+<ion-list id="persons">
+    <ion-item *ngFor="let person of process.getPersons()">
+      <ion-avatar item-start>
+        <img [src]="person.img">
+      </ion-avatar>
+      <span class="name">{{person.name}}</span>
+      <span class="job">{{person.job}}</span>
+      <p>{{person.firm}}</p>
+      <p>Tel: {{person.tel}}</p>
+      <p>Mail: <span class="mail">{{person.mail}}</span></p>
+    </ion-item>
+  </ion-list>
