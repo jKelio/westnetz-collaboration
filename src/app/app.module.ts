@@ -13,11 +13,13 @@ import { AllProcessesComponent } from '../components/all-processes/all-processes
 import { MapComponent } from '../components/map/map';
 import { DocHistoryComponent } from '../components/doc-history/doc-history';
 import { SchedulerComponent } from '../components/scheduler/scheduler';
+import { FilePage } from '../pages/file/file';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    FilePage,
     ActiveProcessComponent,
     AllProcessesComponent,
     MapComponent,
@@ -31,7 +33,8 @@ import { SchedulerComponent } from '../components/scheduler/scheduler';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    FilePage
   ],
   providers: [
     StatusBar,

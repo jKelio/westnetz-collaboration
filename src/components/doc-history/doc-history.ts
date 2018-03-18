@@ -15,8 +15,9 @@ export class DocHistoryComponent {
     
   }
 
-  fileModal(page): void {
-    this.openModal.emit(page);
+  fileModal(file): void {
+    debugger;
+    this.openModal.emit(file);
   }
 
 }

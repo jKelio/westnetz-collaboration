@@ -22,7 +22,7 @@
           <p>{{selected.description}}</p>
           
           <h4>Anhang</h4>
-          <doc-history [process]="selected"></doc-history>
+          <doc-history [process]="selected" (openModal)="fileModal($event)"></doc-history>
         </div>
       </ion-col>
     </ion-row>
