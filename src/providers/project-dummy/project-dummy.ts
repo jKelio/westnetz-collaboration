@@ -14,29 +14,29 @@ export class ProjectDummyProvider {
     getDummy() : Project {
         var process1 = new Process('Besichtigung',
             'Besuch Baustelle',
-            new Date(2018, 2, 15),
-            new Date(2018, 2, 16),
+            new Date(2018, 3, 15),
+            new Date(2018, 3, 16),
             'In Bearbeitung',
             'kommune');
 
         var process5 = new Process('Erdarbeiten',
             'Inspektion nach Plan.',
-            new Date(2018, 2, 7),
-            new Date(2018, 2, 15),
+            new Date(2018, 3, 1),
+            new Date(2018, 3, 7),
             'Offen',
             'tiefbauer');
 
         var process2 = new Process('Absicherung',
             'Nach 500 Metern Feedback für Baustellenkontrolle geben.',
-            new Date(2018, 2, 10),
-            new Date(2018, 2, 14),
+            new Date(2018, 3, 4),
+            new Date(2018, 3, 10),
             'In',
             'techniker');
 
         var process3 = new Process('Kabelverlegung',
             'Wichtig: Mit Herrn Müller Techniktermin besprechen.',
-            new Date(2018, 2, 12),
-            new Date(2018, 2, 24),
+            new Date(2018, 3, 9),
+            new Date(2018, 3, 24),
             'Offen',
             'vermesser');
 
@@ -123,7 +123,6 @@ export class ProjectDummyProvider {
 
         process1.addFile(file1);
         process1.addFile(file2);
-        process1.addFile(file3);
         process1.addFile(file4);
         process1.addFile(file5);
 

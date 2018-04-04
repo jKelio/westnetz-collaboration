@@ -54,6 +54,9 @@ export class Project {
     }
 
     getProcess(date: Date): Process {
+
+        //return this.processes[2];
+
         return this.processes.find((curr: Process) => {
 
             if(curr.getStart() < date && date <= curr.getEnd())
