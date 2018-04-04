@@ -1,5 +1,14 @@
-ion-header {
+ion-navbar {
     //background-color: $color-dark;
+    background-color: #222 !important;
+}
+
+.searchbar-input {
+    background-color: #eee !important;
+}
+
+.searchbar-search-icon {
+    color: white !important;
 }
 
 ion-content {
@@ -15,12 +24,12 @@ page-home {
 
     #scheduler-wrapper {
         margin: 10px;
-        height: 525px;
+        height: 500px;
     }
 
     #overview {
         height: 550px;
-        margin-bottom: 4px;
+        margin-bottom: -18px;
     }
 
     #searchbar {
